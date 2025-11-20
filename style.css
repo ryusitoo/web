@@ -512,6 +512,19 @@ span {
     transform: scale(1.08);
 }
 
+/* ✅ FIX ESPECÍFICO PARA MINEXUS: agrandar y centrar */
+.reference-card:nth-child(2) .ref-logo img {
+    transform: scale(1.35) translateY(-1px);
+    max-width: 65px;
+    max-height: 65px;
+}
+
+@media (max-width: 520px) {
+    .reference-card:nth-child(2) .ref-logo img {
+        transform: scale(1.25) translateY(-1px);
+    }
+}
+
 /* Fallback para DogsCraft: "?" en badge */
 .ref-logo-placeholder {
     display: flex;
