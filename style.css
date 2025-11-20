@@ -514,7 +514,7 @@ span {
 
 /* ✅ FIX ESPECÍFICO PARA MINEXUS: agrandar y centrar */
 .ref-logo .minexus-logo {
-    transform: scale(1.4) translateY(-2px) !important;
+    transform: scale(1.4) translateY(4px) !important;
     max-width: 68px !important;
     max-height: 68px !important;
     object-fit: cover !important;
