@@ -484,24 +484,28 @@ span {
 
 /* ===== Logo en Referencias ===== */
 .ref-logo {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 16px;
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ref-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease;
 }
 
 .reference-card:hover .ref-logo img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Fallback para DogsCraft: "?" en badge */
@@ -511,7 +515,7 @@ span {
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: var(--text-color);
     background: rgba(255, 255, 255, 0.1);
@@ -523,7 +527,7 @@ span {
 .reference-card:hover .ref-logo-placeholder {
     background: var(--main-color);
     color: var(--bg-color);
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* ===== References Section ===== */
