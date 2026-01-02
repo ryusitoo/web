@@ -526,20 +526,11 @@ span {
     }
 }
 
-/* Fallback para DogsCraft: "?" en badge */
-.ref-logo-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: var(--text-color);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border: 2px solid var(--main-color);
-    transition: all 0.3s ease;
+/* Badge amarillo para RayoMc */
+.ref-tag--owner-rayomc {
+    background: #FFD700; /* Amarillo dorado */
+    color: #081b29;
+    font-weight: 700;
 }
 
 .reference-card:hover .ref-logo-placeholder {
