@@ -526,13 +526,6 @@ span {
     }
 }
 
-/* Badge amarillo para RayoMc */
-.ref-tag--owner-rayomc {
-    background: #FFD700; /* Amarillo dorado */
-    color: #081b29;
-    font-weight: 700;
-}
-
 .reference-card:hover .ref-logo-placeholder {
     background: var(--main-color);
     color: var(--bg-color);
@@ -643,6 +636,12 @@ span {
 .ref-tag--owner {
     background: #4d8eff;
     color: #081b29;
+}
+
+.ref-tag--owner-rayomc {
+    background: #FFD700; /* Amarillo dorado */
+    color: #081b29;
+    font-weight: 700;
 }
 
 .ref-tag--manager {
