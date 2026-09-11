@@ -47,12 +47,21 @@
 
       <div class="hero-photo">
         <div class="hero-photo-ring">
-          <img src="clovicspfp.jpg" alt="Foto de Ryuuu" />
+          <img id="dc-avatar" src="clovicspfp.jpg" alt="Foto de Ryuuu" />
+          <span id="dc-dot" class="dc-dot dc-dot-offline"></span>
         </div>
-        <span class="hero-name">Ryuuu</span>
-        <a class="discord-card" href="https://discord.gg/XXQP9EAdQJ" target="_blank" rel="noopener">
+        <span id="dc-username" class="hero-name">Ryuuu</span>
+
+        <a class="discord-card" href="https://discord.gg/XXQP9EAdQJ" target="_blank" rel="noopener" id="discord-card">
           <div class="dc-label">DISCORD</div>
-          <div class="dc-status">@ryuuu</div>
+          <div id="dc-status-text" class="dc-status">Conectando…</div>
+          <div id="dc-activity" class="dc-activity" hidden>
+            <img id="dc-activity-img" class="dc-activity-img" src="" alt="" hidden />
+            <div class="dc-activity-text">
+              <div id="dc-activity-name" class="dc-activity-name"></div>
+              <div id="dc-activity-detail" class="dc-activity-detail"></div>
+            </div>
+          </div>
         </a>
       </div>
     </div>
