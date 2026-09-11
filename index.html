@@ -3,234 +3,153 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ryuuu — Configurador &amp; Desarrollador de Minecraft</title>
-<meta name="description" content="Portafolio de Ryuuu: configuración avanzada de servidores de Minecraft, desarrollo de plugins en Java y automatización." />
+<title>Ryuuu — Configurador de servidores de Minecraft</title>
+<meta name="description" content="Portafolio de Ryuuu: configuraciones para servidores de Minecraft." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="grain"></div>
+<div class="dots" aria-hidden="true"></div>
 
-<header class="nav" id="top">
+<header class="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top">
-      <span class="brand-glyph">~/</span>ryuuu
+    <a class="brand" href="#inicio">
+      <img class="brand-icon" src="clovicspfp.jpg" alt="" />
+      <span>RYUUU</span>
     </a>
     <nav class="nav-links">
-      <a href="#home">inicio</a>
-      <a href="#about">acerca</a>
-      <a href="#skills">habilidades</a>
-      <a href="#work">proyectos</a>
-      <a href="#contact">contacto</a>
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#contacto">Contacto</a>
     </nav>
-    <a class="nav-cta" href="https://discord.gg/XXQP9EAdQJ" target="_blank" rel="noopener">Discord</a>
   </div>
 </header>
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="eyebrow-config">
-          <span class="dot"></span> server-status: <span class="accent">disponible</span>
-        </p>
-        <h1>Hola, soy <span class="accent">Ryuuu</span>.<br>Configuro y desarrollo<br>para servidores de Minecraft.</h1>
-        <p class="lede">
-          Trabajo la arquitectura de servidores y su ecosistema de plugins: Java, Python, Bash
-          y configuración YAML para construir entornos estables, personalizados y
-          optimizados para comunidades exigentes.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#work">Ver proyectos</a>
-          <a class="btn btn-ghost" href="#contact">Contáctame</a>
-        </div>
-      </div>
-
-      <div class="hero-panel" aria-hidden="false">
-        <div class="panel-head">
-          <span class="panel-dot red"></span>
-          <span class="panel-dot yellow"></span>
-          <span class="panel-dot green"></span>
-          <span class="panel-file">perfil.yml</span>
-        </div>
-        <pre class="panel-body"><code><span class="k">nombre:</span> <span class="v">Ryuuu</span>
-<span class="k">rol:</span> <span class="v">Configurador profesional</span>
-<span class="k">stack:</span>
-  <span class="v">- Java (Spigot / Paper / Velocity)</span>
-  <span class="v">- YAML</span>
-  <span class="v">- Bash</span>
-  <span class="v">- Python</span>
-<span class="k">disponible:</span> <span class="v">true</span>
-<span class="k">contacto:</span> <span class="v">discord.gg/XXQP9EAdQJ</span></code></pre>
-      </div>
+  <!-- INICIO -->
+  <section class="hero" id="inicio">
+    <h1>Hola soy <span class="grad">Ryuuu</span></h1>
+    <p class="hero-text">
+      Tengo la experiencia suficiente configurando servidores de Minecraft:
+      economía, rangos, eventos, plugins y optimización para comunidades grandes.
+      ¡Puedes contactarme para mejorar tu servidor!
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#trabajos">Ver trabajos</a>
+      <a class="btn btn-ghost" href="#trayectoria">Ver trayectoria</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="section-inner about-grid">
-      <div class="about-photo">
-        <img src="clovicspfp.jpg" alt="Foto de Ryuuu" />
-      </div>
-      <div class="about-copy">
-        <p class="section-tag">Acerca de mí</p>
-        <h2>Configurador &amp; desarrollador de infraestructura de Minecraft</h2>
-        <p>
-          Me apasiona la infraestructura técnica detrás de los servidores de Minecraft.
-          Combino precisión técnica, solución creativa de problemas y una alta capacidad
-          de adaptación a las necesidades de cada proyecto.
-        </p>
-        <p>
-          He trabajado con servidores de gran escala, donde la estabilidad, la seguridad y
-          la experiencia del jugador son prioridad. Mi objetivo siempre es entregar
-          sistemas robustos, mantenibles y escalables.
-        </p>
-        <a class="link-arrow" href="#contact">Escríbeme</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
+  <!-- TRABAJOS -->
+  <section class="trabajos" id="trabajos">
     <div class="section-inner">
-      <p class="section-tag">Habilidades</p>
-      <h2>Lo que domino</h2>
+      <h2>Trabajos <span class="grad">Realizados</span></h2>
 
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h3>Técnicas</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-row"><span>YAML / Configuración</span><span class="skill-pct">98%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:98%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Java (Plugins)</span><span class="skill-pct">90%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Bash / Automatización</span><span class="skill-pct">85%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Python (Scripts)</span><span class="skill-pct">80%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="skill-group">
-          <h3>Profesionales</h3>
-          <ul class="skill-list">
-            <li>
-              <div class="skill-row"><span>Optimización de servidores</span><span class="skill-pct">95%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Solución de problemas</span><span class="skill-pct">93%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:93%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Gestión de equipos</span><span class="skill-pct">85%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
-            </li>
-            <li>
-              <div class="skill-row"><span>Documentación técnica</span><span class="skill-pct">88%</span></div>
-              <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
-            </li>
-          </ul>
+      <div class="cards-grid cards-grid-single">
+        <div class="work-tile">
+          <div class="tile-badge">
+            <span>CONFIGS</span>
+          </div>
+          <h3>Configs</h3>
+          <p>Configuraciones para servidores de Minecraft</p>
         </div>
       </div>
+
+      <a class="cta-pill" href="#contacto">¿Quieres contratar mis servicios? ¡Pulsa aquí!</a>
     </div>
   </section>
 
-  <!-- WORK / REFERENCES -->
-  <section class="work" id="work">
+  <!-- TRAYECTORIA -->
+  <section class="trayectoria" id="trayectoria">
     <div class="section-inner">
-      <p class="section-tag">Proyectos</p>
-      <h2>Servidores en los que he trabajado</h2>
+      <h2>Mi <span class="grad">Trayectoria</span></h2>
 
-      <div class="work-list">
-        <article class="work-card">
-          <img class="work-logo" src="images/logos/rayomc.png" alt="Logo de RayoMc" />
-          <div class="work-body">
-            <div class="work-title-row">
+      <div class="server-list">
+
+        <article class="server-card">
+          <img class="server-logo" src="images/logos/rayomc.png" alt="Logo de RayoMc" />
+          <div class="server-body">
+            <div class="server-head">
               <h3>RayoMc</h3>
               <span class="status status-active">Actual</span>
             </div>
-            <p class="work-dates">2025 – Presente</p>
-            <p>Desarrollo de plugins personalizados de cosméticos, corrección de bugs,
+            <p class="server-dates">2025 – Presente</p>
+            <p class="server-desc">
+              Desarrollo de plugins personalizados de cosméticos, corrección de bugs,
               optimización de modalidades existentes y creación de una modalidad nueva
-              desde cero.</p>
+              desde cero.
+            </p>
+            <blockquote class="server-review">
+              «Me gustó mucho el servicio. Pedí un plugin personalizado de cosméticos,
+              el tiempo de entrega fue rápido, muy buena atención, en todo momento hizo
+              caso a mis indicaciones. Sin duda, el mejor. 10/10.»
+              <cite>— Iwidayo, Dueño de RayoMc</cite>
+            </blockquote>
           </div>
         </article>
 
-        <article class="work-card">
-          <img class="work-logo" src="images/logos/minesplash.png" alt="Logo de MineSplash" />
-          <div class="work-body">
-            <div class="work-title-row">
+        <article class="server-card">
+          <img class="server-logo" src="images/logos/minesplash.png" alt="Logo de MineSplash" />
+          <div class="server-body">
+            <div class="server-head">
               <h3>MineSplash</h3>
               <span class="status status-legacy">Legado</span>
             </div>
-            <p class="work-dates">2024 – 2026</p>
-            <p>Configuración avanzada de sistemas de economía, rangos y eventos usando
-              YAML. Optimización de plugins para más de 250 jugadores concurrentes.</p>
+            <p class="server-dates">2024 – 2026</p>
+            <p class="server-desc">
+              Configuración avanzada de sistemas de economía, rangos y eventos usando
+              YAML. Optimización de plugins para más de 250 jugadores concurrentes.
+            </p>
+            <blockquote class="server-review">
+              «Ha demostrado ser una persona dedicada y comprometida con su trabajo.
+              Como developer tiene una excelente capacidad para crear plugins no
+              pensados: las rooms, el calendario y la vida compartida funcionan
+              perfectamente y no han presentado ningún problema. Ryu es una pieza clave
+              en un servidor.»
+              <cite>— LeadVal, Manager de MineSplash</cite>
+            </blockquote>
+            <blockquote class="server-review">
+              «Mi reseña con el trabajo de Ryu es bastante buena, estoy totalmente
+              satisfecho con el trabajo que ha hecho hasta el momento.»
+              <cite>— Bronceadito, Dueño de MineSplash</cite>
+            </blockquote>
           </div>
         </article>
 
-        <article class="work-card">
-          <img class="work-logo" src="images/logos/minexus.png" alt="Logo de Minexus" />
-          <div class="work-body">
-            <div class="work-title-row">
+        <article class="server-card">
+          <img class="server-logo" src="images/logos/minexus.png" alt="Logo de Minexus" />
+          <div class="server-body">
+            <div class="server-head">
               <h3>Minexus</h3>
               <span class="status status-legacy">Legado</span>
             </div>
-            <p class="work-dates">2024 – 2024</p>
-            <p>Desarrollo y mantenimiento de plugins personalizados (eventos, minijuegos,
-              herramientas de staff). Totalmente escrito en Java desde cero.</p>
+            <p class="server-dates">2024 – 2024</p>
+            <p class="server-desc">
+              Desarrollo y mantenimiento de plugins personalizados (eventos, minijuegos,
+              herramientas de staff). Totalmente escrito en Java desde cero.
+            </p>
           </div>
         </article>
-      </div>
 
-      <div class="testimonials">
-        <blockquote>
-          <p>«Mi reseña con el trabajo de Ryu es bastante buena, estoy totalmente
-            satisfecho con el trabajo que ha hecho hasta el momento.»</p>
-          <cite>Bronceadito — Dueño, MineSplash</cite>
-        </blockquote>
-        <blockquote>
-          <p>«Como developer tiene una excelente capacidad para crear plugins no
-            pensados: las rooms, el calendario y la vida compartida funcionan
-            perfectamente y no han presentado ningún problema. Ryu es una pieza clave
-            en un servidor.»</p>
-          <cite>LeadVal — Manager, MineSplash</cite>
-        </blockquote>
-        <blockquote>
-          <p>«Pedí un plugin personalizado de cosméticos, el tiempo de entrega fue
-            rápido, muy buena atención y siguió todas mis indicaciones. Sin duda, el
-            mejor. 10/10.»</p>
-          <cite>Iwidayo — Dueño, RayoMc</cite>
-        </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="section-inner contact-inner">
-      <p class="section-tag">Contacto</p>
-      <h2>¿Tienes un servidor y necesitas ayuda?</h2>
-      <p class="lede">
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="section-inner contacto-inner">
+      <h2>Conecta<span class="grad">mos</span></h2>
+      <p class="hero-text">
         Por ahora, la mejor forma de contactarme es por Discord. Estoy abierto a
         colaboraciones, consultas técnicas o simplemente charlar sobre servidores.
       </p>
-      <a class="btn btn-primary btn-lg" href="https://discord.gg/XXQP9EAdQJ" target="_blank" rel="noopener">
-        Escríbeme en Discord — @ryudeidadd
+      <a class="btn btn-primary" href="https://discord.gg/XXQP9EAdQJ" target="_blank" rel="noopener">
+        Escríbeme en Discord — @ryuuu
       </a>
     </div>
   </section>
@@ -238,10 +157,8 @@
 </main>
 
 <footer class="footer">
-  <div class="section-inner footer-inner">
-    <span>Hecho con 💻 y ♥ por Ryuuu</span>
-    <span>© 2025</span>
-  </div>
+  <span>ryusitoo.github.io</span>
+  <span>2025</span>
 </footer>
 
 <script src="script.js"></script>
