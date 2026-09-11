@@ -1,5 +1,3 @@
-// Presencia de Discord en vivo (Lanyard API)
-// Documentación: https://github.com/Phineas/lanyard
 const DISCORD_ID = "1299797897201586328";
 
 const statusLabels = {
@@ -18,7 +16,6 @@ async function loadDiscordPresence() {
   const activityNameEl = document.getElementById("dc-activity-name");
   const activityDetailEl = document.getElementById("dc-activity-detail");
 
-  // Esta tarjeta solo existe en inicio.html
   if (!statusTextEl) return;
 
   try {
@@ -30,7 +27,6 @@ async function loadDiscordPresence() {
     const data = json.data;
     const user = data.discord_user;
 
-    // Avatar y nombre
     if (avatarEl && user.avatar) {
       avatarEl.src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=256`;
     }
@@ -38,7 +34,6 @@ async function loadDiscordPresence() {
       usernameEl.textContent = user.global_name || user.username;
     }
 
-    // Estado (online / idle / dnd / offline)
     const status = data.discord_status || "offline";
     if (dotEl) {
       dotEl.className = `dc-dot dc-dot-${status}`;
@@ -47,15 +42,12 @@ async function loadDiscordPresence() {
       statusTextEl.textContent = statusLabels[status] || "Desconectado";
     }
 
-    // Actividad: prioriza Spotify, luego cualquier otra actividad (jugando/viendo)
-    // Se muestra solo como texto para evitar íconos rotos cuando Discord no
-    // expone la imagen de la actividad.
     if (data.listening_to_spotify && data.spotify) {
       activityEl.hidden = false;
       activityNameEl.textContent = `🎧 ${data.spotify.song}`;
       activityDetailEl.textContent = `de ${data.spotify.artist}`;
     } else {
-      const activity = (data.activities || []).find((a) => a.type !== 4); // type 4 = estado personalizado
+      const activity = (data.activities || []).find((a) => a.type !== 4);
       if (activity) {
         activityEl.hidden = false;
         activityNameEl.textContent = `🎮 ${activity.name}`;
