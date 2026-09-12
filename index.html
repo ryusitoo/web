@@ -2,12 +2,82 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="refresh" content="0; url=inicio.html" />
-<link rel="canonical" href="inicio.html" />
-<title>Ryuuu</title>
-<script>location.replace("inicio.html");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ryuuu | Inicio</title>
+<meta name="description" content="Portafolio de Ryuuu: configuraciones para servidores de Minecraft." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/web/style.css" />
 </head>
 <body>
-<p>Redirigiendo a <a href="inicio.html">inicio.html</a>…</p>
+
+<div class="dots" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true">
+  <span class="blob blob-a"></span>
+  <span class="blob blob-b"></span>
+  <span class="blob blob-c"></span>
+</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/web/">
+      <img class="brand-icon" src="/web/clovicspfp.jpg" alt="" />
+      <span>RYUUU</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/web/" class="active">Inicio</a>
+      <a href="trabajos/">Trabajos</a>
+      <a href="trayectoria/">Trayectoria</a>
+      <a href="contacto/">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Qué tal, soy <span class="grad">Ryuuu</span></h1>
+        <p class="hero-text">
+          Detrás de un buen servidor de Minecraft hay mucha configuración
+          invisible: economía balanceada, rangos, eventos y plugins que no se
+          caen a mitad de temporada. Eso es lo que hago — si tu servidor lo
+          necesita, hablemos.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="trabajos/">Ver trabajos</a>
+          <a class="btn btn-ghost" href="trayectoria/">Ver trayectoria</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-ring">
+          <img id="dc-avatar" src="/web/clovicspfp.jpg" alt="Foto de Ryuuu" />
+          <span id="dc-dot" class="dc-dot dc-dot-offline"></span>
+        </div>
+        <span id="dc-username" class="hero-name">Ryuuu</span>
+
+        <a class="discord-card" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener" id="discord-card">
+          <div class="dc-label">DISCORD</div>
+          <div id="dc-status-text" class="dc-status">Conectando…</div>
+          <div id="dc-activity" class="dc-activity" hidden>
+            <div class="dc-activity-text">
+              <div id="dc-activity-name" class="dc-activity-name"></div>
+              <div id="dc-activity-detail" class="dc-activity-detail"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>ryusitoo.github.io</span>
+  <span>2025</span>
+</footer>
+
+<script src="/web/script.js"></script>
 </body>
 </html>
