@@ -155,7 +155,10 @@
         ind.style.width = a.offsetWidth + "px";
         ind.style.transform = `translateX(${a.offsetLeft}px)`;
       };
-      requestAnimationFrame(() => moveTo(active));
+      // posición inicial sin animación (así la transición entre páginas la desliza)
+      ind.style.transition = "none";
+      moveTo(active);
+      requestAnimationFrame(() => requestAnimationFrame(() => { ind.style.transition = ""; }));
       $$("a", links).forEach((a) => a.addEventListener("mouseenter", () => moveTo(a)));
       links.addEventListener("mouseleave", () => moveTo(active));
       addEventListener("resize", () => moveTo(active));
@@ -356,6 +359,30 @@
   /* ---------- transiciones entre páginas ---------- */
   function pageTransitions() {
     if (reduceMotion) return;
+    const order = ["/web/", "/web/trabajos/", "/web/trayectoria/", "/web/contacto/"];
+    const idx = (u) => order.indexOf(new URL(u, location.href).pathname.replace(/index\.html$/, ""));
+    const direction = (from, to) => {
+      const a = idx(from), b = idx(to);
+      return a === -1 || b === -1 || a === b ? "fade" : b > a ? "forward" : "backward";
+    };
+
+    // Navegadores con transiciones nativas entre páginas (Chrome, Edge, Brave, Opera…)
+    if ("onpagereveal" in window) {
+      addEventListener("pageswap", (e) => {
+        if (e.viewTransition && e.activation && e.activation.entry) {
+          e.viewTransition.types.add(direction(location.href, e.activation.entry.url));
+        }
+      });
+      addEventListener("pagereveal", (e) => {
+        if (!e.viewTransition) return;
+        const from = navigation.activation && navigation.activation.from;
+        e.viewTransition.types.add(from ? direction(from.url, location.href) : "fade");
+        document.documentElement.classList.add("vt-arrived");
+      });
+      return;
+    }
+
+    // Respaldo para el resto: desvanecido + deslizamiento
     document.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -363,8 +390,9 @@
       if (url.origin !== location.origin || (url.pathname === location.pathname && url.hash)) return;
       if (url.href === location.href) { e.preventDefault(); return; }
       e.preventDefault();
+      document.body.dataset.dir = direction(location.href, url.href);
       document.body.classList.add("leaving");
-      setTimeout(() => { location.href = url.href; }, 320);
+      setTimeout(() => { location.href = url.href; }, 380);
     });
     addEventListener("pageshow", () => document.body.classList.remove("leaving"));
   }
