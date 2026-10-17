@@ -1,6 +1,3 @@
-/* =========================================================
-   Ryuuu — portafolio · interacciones y animaciones
-   ========================================================= */
 (() => {
   "use strict";
 
@@ -9,7 +6,6 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
-  /* ---------- capas compartidas ---------- */
   function injectLayers() {
     const add = (html) => document.body.insertAdjacentHTML("afterbegin", html);
     add('<div class="page-curtain" aria-hidden="true"></div>');
@@ -20,7 +16,6 @@
     document.body.insertAdjacentHTML("beforeend", '<div class="toast" role="status" aria-live="polite"></div>');
   }
 
-  /* ---------- preloader ---------- */
   function preloader() {
     const el = $(".preloader");
     if (!el) return Promise.resolve();
@@ -37,7 +32,6 @@
     });
   }
 
-  /* ---------- fondo: red de partículas ---------- */
   function particles() {
     const canvas = $("#bg-canvas");
     if (!canvas || reduceMotion) return;
@@ -69,7 +63,6 @@
       const link = LINK * dpr;
       for (let i = 0; i < pts.length; i++) {
         const p = pts[i];
-        // repulsión suave del cursor
         const dxm = p.x - mouse.x, dym = p.y - mouse.y;
         const dm = Math.hypot(dxm, dym);
         if (dm < 140 * dpr && dm > 0) {
@@ -113,7 +106,6 @@
     });
   }
 
-  /* ---------- glow que sigue al cursor ---------- */
   function cursorGlow() {
     const g = $(".cursor-glow");
     if (!g || !finePointer || reduceMotion) return;
@@ -129,7 +121,6 @@
     })();
   }
 
-  /* ---------- nav ---------- */
   function nav() {
     const navEl = $(".nav");
     const bar = $(".scroll-progress");
@@ -144,7 +135,6 @@
     addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
-    // indicador deslizante
     const links = $(".nav-links");
     const ind = $(".nav-indicator");
     if (links && ind) {
@@ -155,7 +145,6 @@
         ind.style.width = a.offsetWidth + "px";
         ind.style.transform = `translateX(${a.offsetLeft}px)`;
       };
-      // posición inicial sin animación (así la transición entre páginas la desliza)
       ind.style.transition = "none";
       moveTo(active);
       requestAnimationFrame(() => requestAnimationFrame(() => { ind.style.transition = ""; }));
@@ -165,7 +154,6 @@
       document.fonts && document.fonts.ready.then(() => moveTo(active));
     }
 
-    // menú móvil
     const toggle = $(".nav-toggle");
     if (toggle) {
       toggle.addEventListener("click", () => {
@@ -176,7 +164,6 @@
     }
   }
 
-  /* ---------- dividir títulos en palabras ---------- */
   function splitText() {
     $$(".split").forEach((el) => {
       let i = 0;
@@ -206,7 +193,6 @@
     });
   }
 
-  /* ---------- aparición al hacer scroll ---------- */
   function reveals() {
     $$("[data-stagger]").forEach((parent) => {
       const step = parseFloat(parent.dataset.stagger) || .1;
@@ -232,7 +218,6 @@
     targets.forEach((t) => io.observe(t));
   }
 
-  /* ---------- máquina de escribir ---------- */
   function typewriter() {
     const el = $(".typed");
     if (!el) return;
@@ -251,7 +236,6 @@
     })();
   }
 
-  /* ---------- contadores ---------- */
   function counters() {
     $$("[data-count]").forEach((el) => {
       el.addEventListener("inview", () => {
@@ -271,13 +255,11 @@
     });
   }
 
-  /* ---------- terminal YAML ---------- */
   function terminal() {
     const term = $(".terminal");
     const body = $(".term-body", term || document);
     const src = $("#term-src");
     if (!term || !body || !src) return;
-    // formato del template: cada línea "clase|texto" separada por ¦
     const lines = (src.content || src).textContent.trim().split("\n").map((line) =>
       line.split("¦").map((seg) => {
         const k = seg.indexOf("|");
@@ -312,7 +294,6 @@
     }, { once: true });
   }
 
-  /* ---------- tarjetas con inclinación 3D + brillo ---------- */
   function tilt() {
     if (!finePointer || reduceMotion) return;
     $$(".tilt").forEach((card) => {
@@ -328,7 +309,6 @@
     });
   }
 
-  /* ---------- botones magnéticos ---------- */
   function magnetic() {
     if (!finePointer || reduceMotion) return;
     $$(".magnetic").forEach((b) => {
@@ -342,7 +322,6 @@
     });
   }
 
-  /* ---------- línea de tiempo que se dibuja ---------- */
   function timeline() {
     const tl = $(".timeline");
     const fill = $(".timeline-line span");
@@ -356,7 +335,6 @@
     update();
   }
 
-  /* ---------- transiciones entre páginas ---------- */
   function pageTransitions() {
     if (reduceMotion) return;
     const order = ["/web/", "/web/trabajos/", "/web/trayectoria/", "/web/contacto/"];
@@ -366,7 +344,6 @@
       return a === -1 || b === -1 || a === b ? "fade" : b > a ? "forward" : "backward";
     };
 
-    // Navegadores con transiciones nativas entre páginas (Chrome, Edge, Brave, Opera…)
     if ("onpagereveal" in window) {
       addEventListener("pageswap", (e) => {
         if (e.viewTransition && e.activation && e.activation.entry) {
@@ -382,7 +359,6 @@
       return;
     }
 
-    // Respaldo para el resto: desvanecido + deslizamiento
     document.addEventListener("click", (e) => {
       const a = e.target.closest("a");
       if (!a || a.target === "_blank" || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -397,7 +373,6 @@
     addEventListener("pageshow", () => document.body.classList.remove("leaving"));
   }
 
-  /* ---------- toast y copiar ---------- */
   let toastT;
   function toast(msg) {
     const t = $(".toast");
@@ -415,13 +390,11 @@
     }));
   }
 
-  /* ---------- extras ---------- */
   function misc() {
     $$(".js-year").forEach((el) => (el.textContent = new Date().getFullYear()));
     $$(".to-top").forEach((b) => b.addEventListener("click", () => scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" })));
   }
 
-  /* ---------- presencia de Discord (Lanyard) ---------- */
   const DISCORD_ID = "1299797897201586328";
   const statusLabels = { online: "En línea", idle: "Ausente", dnd: "No molestar", offline: "Desconectado" };
   const statusColors = { online: "#23A55A", idle: "#F0B232", dnd: "#F23F42", offline: "#80848E" };
@@ -472,7 +445,116 @@
     }
   }
 
-  /* ---------- arranque ---------- */
+  function voidBlocks() {
+    const box = $(".void-blocks");
+    if (!box || reduceMotion) return;
+    const colors = ["#5D8C3E", "#7A5536", "#8B8B8B", "#49C6E5", "#4E7FFF", "#6B4A2E", "#3DBE6A"];
+    for (let i = 0; i < 16; i++) {
+      const b = document.createElement("span");
+      const size = 14 + Math.random() * 26;
+      b.style.cssText = `left:${Math.random() * 100}%;width:${size}px;height:${size}px;background:${colors[i % colors.length]};animation-duration:${4 + Math.random() * 5}s;animation-delay:${-Math.random() * 8}s;--r:${Math.random() * 720 - 360}deg`;
+      box.appendChild(b);
+    }
+  }
+
+  function creeperEgg() {
+    const word = "creeper";
+    let buffer = "";
+    let busy = false;
+    addEventListener("keydown", (e) => {
+      if (e.target.closest("input, textarea, [contenteditable]")) return;
+      if (e.key.length !== 1) return;
+      buffer = (buffer + e.key.toLowerCase()).slice(-word.length);
+      if (buffer === word) { buffer = ""; boom(); }
+    });
+    let taps = 0, tapT;
+    $$(".hero-photo-ring, .contact-avatar, .brand-icon").forEach((el) => el.addEventListener("click", (e) => {
+      if (el.classList.contains("brand-icon")) return;
+      taps++;
+      clearTimeout(tapT);
+      tapT = setTimeout(() => (taps = 0), 1200);
+      if (taps >= 5) { taps = 0; boom(); }
+    }));
+    console.log("%c psst… escribe 'creeper' en la página 👀", "color:#49C6E5;font:600 13px monospace");
+
+    function boom() {
+      if (busy) return;
+      busy = true;
+      const fuse = document.createElement("div");
+      fuse.className = "egg-fuse";
+      fuse.textContent = "Ssssss…";
+      document.body.appendChild(fuse);
+      document.body.classList.add("egg-hiss");
+
+      setTimeout(() => {
+        fuse.remove();
+        document.body.classList.remove("egg-hiss");
+        const flash = document.createElement("div");
+        flash.className = "egg-flash";
+        document.body.appendChild(flash);
+        setTimeout(() => flash.remove(), 700);
+        document.body.classList.add("egg-shake");
+        setTimeout(() => document.body.classList.remove("egg-shake"), 600);
+
+        if (!reduceMotion) debris();
+        const targets = $$("main h1, main h2, main p, main .btn, .stat, .service-card, .server-card, .logo-chip, .hero-photo, .terminal, .check-list li, .step, .contact-card, .faq details, .eyebrow, .marquee")
+          .filter((el) => { const r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; });
+        const cx = innerWidth / 2, cy = innerHeight / 2;
+        targets.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          const dx = r.left + r.width / 2 - cx, dy = r.top + r.height / 2 - cy;
+          const d = Math.hypot(dx, dy) || 1;
+          const force = 260 + Math.random() * 260;
+          el.classList.add("egg-blown");
+          el.style.transform = `translate(${(dx / d) * force}px, ${(dy / d) * force - 120}px) rotate(${Math.random() * 120 - 60}deg) scale(.8)`;
+          el.style.opacity = "0";
+        });
+
+        setTimeout(() => {
+          targets.forEach((el, i) => {
+            el.classList.add("egg-rebuild");
+            el.style.transitionDelay = `${i * 25}ms`;
+            el.style.transform = "";
+            el.style.opacity = "";
+          });
+          setTimeout(() => {
+            targets.forEach((el) => { el.classList.remove("egg-blown", "egg-rebuild"); el.style.transitionDelay = ""; });
+            busy = false;
+          }, 1400 + targets.length * 25);
+          toast("💥 ¡Boom! Encontraste el easter egg");
+        }, 1900);
+      }, 1500);
+    }
+
+    function debris() {
+      const c = document.createElement("canvas");
+      c.className = "egg-canvas";
+      document.body.appendChild(c);
+      const ctx = c.getContext("2d");
+      c.width = innerWidth; c.height = innerHeight;
+      const colors = ["#5D8C3E", "#4C7A2F", "#7A5536", "#8B8B8B", "#6B6B6B", "#3DBE6A", "#2F2F2F"];
+      const parts = Array.from({ length: 90 }, () => {
+        const a = Math.random() * Math.PI * 2, v = 6 + Math.random() * 14;
+        return { x: innerWidth / 2, y: innerHeight / 2, vx: Math.cos(a) * v, vy: Math.sin(a) * v - 6, s: 6 + Math.random() * 14, r: Math.random() * 6, vr: Math.random() * .4 - .2, c: colors[Math.floor(Math.random() * colors.length)] };
+      });
+      const t0 = performance.now();
+      (function frame(t) {
+        const life = (t - t0) / 1800;
+        ctx.clearRect(0, 0, c.width, c.height);
+        parts.forEach((p) => {
+          p.vy += .45; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.r += p.vr;
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, 1 - life);
+          ctx.translate(p.x, p.y); ctx.rotate(p.r);
+          ctx.fillStyle = p.c; ctx.fillRect(-p.s / 2, -p.s / 2, p.s, p.s);
+          ctx.fillStyle = "rgba(0,0,0,.25)"; ctx.fillRect(0, 0, p.s / 2, p.s / 2);
+          ctx.restore();
+        });
+        if (life < 1) requestAnimationFrame(frame); else c.remove();
+      })(t0);
+    }
+  }
+
   injectLayers();
   splitText();
   nav();
@@ -487,6 +569,8 @@
   copyButtons();
   misc();
   typewriter();
+  voidBlocks();
+  creeperEgg();
   preloader().then(reveals);
 
   if ($(".js-dc-status")) {
