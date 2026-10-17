@@ -4,14 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ryuuu | Contacto</title>
+<meta name="description" content="Contacta con Ryuuu por Discord para tu servidor de Minecraft." />
+<meta name="theme-color" content="#070A12" />
+<meta property="og:title" content="Ryuuu | Contacto" />
+<meta property="og:description" content="Contacta con Ryuuu por Discord para tu servidor de Minecraft." />
+<meta property="og:image" content="https://ryusitoo.github.io/web/clovicspfp.jpg" />
+<link rel="icon" href="/web/clovicspfp.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/web/style.css" />
+<script>try{if(sessionStorage.getItem("ryu-intro"))document.documentElement.classList.add("seen")}catch(e){}</script>
 </head>
 <body>
 
-<div class="dots" aria-hidden="true"></div>
 <div class="bg-glow" aria-hidden="true">
   <span class="blob blob-a"></span>
   <span class="blob blob-b"></span>
@@ -24,33 +30,67 @@
       <img class="brand-icon" src="/web/clovicspfp.jpg" alt="" />
       <span>RYUUU</span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Principal">
+      <span class="nav-indicator" aria-hidden="true"></span>
       <a href="/web/">Inicio</a>
       <a href="/web/trabajos/">Trabajos</a>
       <a href="/web/trayectoria/">Trayectoria</a>
-      <a href="/web/contacto/" class="active">Contacto</a>
+      <a href="/web/contacto/" class="active" aria-current="page">Contacto</a>
     </nav>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
+<nav class="mobile-menu" aria-label="Menú móvil">
+  <a href="/web/">Inicio</a>
+  <a href="/web/trabajos/">Trabajos</a>
+  <a href="/web/trayectoria/">Trayectoria</a>
+  <a href="/web/contacto/" class="active">Contacto</a>
+</nav>
+
 <main>
   <section class="page-section">
-    <div class="section-inner contacto-inner">
-      <h2>Conecta<span class="grad">mos</span></h2>
-      <p class="hero-text" style="margin-left:auto;margin-right:auto;">
-        Por ahora, la mejor forma de contactarme es por Discord. Estoy abierto a
-        colaboraciones, consultas técnicas o simplemente charlar sobre servidores.
-      </p>
-      <a class="btn btn-primary" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">
-        Escríbeme en Discord — @ryudeidadd
-      </a>
+    <div class="section-inner">
+      <div class="page-hero">
+        <span class="section-kicker reveal">contacto</span>
+        <h1 class="split">Conecta<span class="grad">mos</span></h1>
+        <p class="reveal" style="--d:.3s">Por ahora, la mejor forma de contactarme es por Discord. Estoy abierto a colaboraciones, consultas técnicas o simplemente charlar sobre servidores.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-card reveal zoom">
+          <div class="contact-avatar">
+            <img class="js-dc-avatar" src="/web/clovicspfp.jpg" alt="Foto de Ryuuu" />
+            <span class="dc-dot dc-dot-offline js-dc-dot"></span>
+          </div>
+          <h2 class="js-dc-name" style="font-size:1.5rem;margin-bottom:4px">Ryuuu</h2>
+          <button class="handle" data-copy="ryudeidadd" title="Copiar usuario">@ryudeidadd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+          <div class="contact-actions">
+            <a class="btn btn-discord magnetic" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg> Escríbeme en Discord</a>
+          </div>
+          <p class="contact-live">Estado ahora: <span class="dc-status js-dc-status" style="display:inline-flex">Conectando…</span></p>
+        </div>
+
+        <div class="faq" data-stagger=".1">
+        <details><summary>¿Qué tipo de trabajos haces?</summary><p>Configuraciones (economía, rangos, eventos), plugins personalizados en Java, modalidades nuevas, optimización y corrección de bugs. Puedes ver más en la sección de Trabajos.</p></details>
+        <details><summary>¿Cuál es la mejor forma de contactarte?</summary><p>Por ahora, Discord. Escríbeme por privado a @ryudeidadd o entra al servidor desde el botón de arriba.</p></details>
+        <details><summary>¿Solo trabajos pagados?</summary><p>También estoy abierto a colaboraciones, consultas técnicas o simplemente charlar sobre servidores.</p></details>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <span>ryusitoo.github.io</span>
-  <span>2025</span>
+  <div class="footer-inner">
+    <span>© <span class="js-year">2025</span> Ryuuu · ryusitoo.github.io</span>
+    <div class="footer-links">
+      <a href="/web/trabajos/">Trabajos</a>
+      <a href="/web/trayectoria/">Trayectoria</a>
+      <a href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">Discord</a>
+    </div>
+    <button class="to-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+  </div>
 </footer>
 
 <script src="/web/script.js"></script>
