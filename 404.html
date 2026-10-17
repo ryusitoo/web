@@ -6,77 +6,60 @@
 <title>Ryuuu | 404</title>
 <meta name="description" content="Página no encontrada." />
 <meta name="theme-color" content="#070A12" />
-<meta property="og:title" content="Ryuuu | Contacto" />
+<meta property="og:title" content="Ryuuu | 404" />
 <meta property="og:description" content="Página no encontrada." />
 <meta property="og:image" content="https://ryusitoo.github.io/web/clovicspfp.jpg" />
 <link rel="icon" href="/web/clovicspfp.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/web/style.css?v=3" />
-<script>try{if(sessionStorage.getItem("ryu-intro"))document.documentElement.classList.add("seen")}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/web/style.css?v=4" />
+<script>try{if(!sessionStorage.getItem("ryu-intro"))document.documentElement.classList.add("first-visit")}catch(e){}</script>
 </head>
 <body>
 
-<div class="bg-glow" aria-hidden="true">
-  <span class="blob blob-a"></span>
-  <span class="blob blob-b"></span>
-  <span class="blob blob-c"></span>
-</div>
-
 <header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="/web/">
-      <img class="brand-icon" src="/web/clovicspfp.jpg" alt="" />
-      <span>RYUUU</span>
-    </a>
-    <nav class="nav-links" aria-label="Principal">
-      <span class="nav-indicator" aria-hidden="true"></span>
-      <a href="/web/">Inicio</a>
-      <a href="/web/trabajos/">Trabajos</a>
-      <a href="/web/trayectoria/">Trayectoria</a>
-      <a href="/web/contacto/">Contacto</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a class="brand" href="/web/#inicio"><img src="/web/clovicspfp.jpg" alt="" /><span>ryu<small>.dev</small></span></a>
+  <nav class="nav__links" aria-label="Secciones">
+    <span class="nav__pill" aria-hidden="true"></span>
+      <a href="/web/#inicio">Inicio</a>
+      <a href="/web/#servidores">Servidores</a>
+      <a href="/web/#habilidades">Habilidades</a>
+      <a href="/web/#referencias">Referencias</a>
+      <a href="/web/#trabajos">Trabajos</a>
+      <a href="/web/#contacto">Contacto</a>
+  </nav>
+  <div class="nav__actions">
+    <a class="nav__status js-dc-color" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg><i></i><span class="js-dc-status">Discord</span></a>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-
-<nav class="mobile-menu" aria-label="Menú móvil">
-  <a href="/web/">Inicio</a>
-  <a href="/web/trabajos/">Trabajos</a>
-  <a href="/web/trayectoria/">Trayectoria</a>
-  <a href="/web/contacto/">Contacto</a>
-</nav>
 
 <main>
   <section class="void">
     <div class="void-blocks" aria-hidden="true"></div>
-    <div class="void-inner">
-      <p class="void-code grad reveal zoom">404</p>
+    <div class="void__inner">
+      <p class="void__code grad reveal reveal--zoom">404</p>
       <h1 class="split">Te caíste <span class="grad">al vacío</span></h1>
       <span class="coords reveal" style="--d:.3s">X: 404 · Y: -64 · Z: 404</span>
-      <p class="reveal" style="--d:.4s">Esta página no existe o se movió a otro bioma. Vuelve al spawn y sigue explorando.</p>
-      <div class="hero-actions reveal" style="--d:.5s">
-        <a class="btn btn-primary magnetic" href="/web/">Reaparecer en el spawn <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-ghost magnetic" href="/web/trabajos/">Ver trabajos</a>
+      <p class="void__text reveal" style="--d:.4s">Esta página no existe o se movió a otro bioma. Vuelve al spawn y sigue explorando.</p>
+      <div class="hero__actions reveal" style="--d:.5s">
+        <a class="btn btn--primary magnetic" href="/web/">Reaparecer en el spawn <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--ghost magnetic" href="/web/#trabajos">Ver trabajos</a>
       </div>
-      <p class="void-hint reveal" style="--d:.7s">psst… prueba a escribir "creeper"</p>
+      <p class="void__hint reveal" style="--d:.7s">psst… prueba a escribir "creeper"</p>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <span>© <span class="js-year">2025</span> Ryuuu · ryusitoo.github.io</span>
-    <div class="footer-links">
-      <a href="/web/trabajos/">Trabajos</a>
-      <a href="/web/trayectoria/">Trayectoria</a>
-      <a href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">Discord</a>
-    </div>
+  <div class="container footer__inner">
+    <span>© <span class="js-year">2026</span> ryu.dev — hecho con café y muchos YAML</span>
+    <span>ryusitoo.github.io</span>
     <button class="to-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
   </div>
 </footer>
 
-<script src="/web/script.js?v=3"></script>
+<script src="/web/script.js?v=4"></script>
 </body>
 </html>

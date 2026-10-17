@@ -3,128 +3,175 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ryuuu | Inicio</title>
+<title>Ryuuu | Developer de servidores</title>
 <meta name="description" content="Portafolio de Ryuuu: configuraciones, plugins y optimización para servidores de Minecraft." />
 <meta name="theme-color" content="#070A12" />
-<meta property="og:title" content="Ryuuu | Inicio" />
+<meta property="og:title" content="Ryuuu | Developer de servidores" />
 <meta property="og:description" content="Portafolio de Ryuuu: configuraciones, plugins y optimización para servidores de Minecraft." />
 <meta property="og:image" content="https://ryusitoo.github.io/web/clovicspfp.jpg" />
 <link rel="icon" href="/web/clovicspfp.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/web/style.css?v=3" />
-<script>try{if(sessionStorage.getItem("ryu-intro"))document.documentElement.classList.add("seen")}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/web/style.css?v=4" />
+<script>try{if(!sessionStorage.getItem("ryu-intro"))document.documentElement.classList.add("first-visit")}catch(e){}</script>
 </head>
-<body>
+<body class="is-loading">
 
-<div class="preloader" aria-hidden="true">
-  <div class="preloader-inner">
-    <div class="preloader-logo"><span>R</span><span>Y</span><span>U</span><span>U</span><span>U</span></div>
-    <div class="preloader-bar"><span></span></div>
-    <div class="preloader-text">cargando configs…</div>
-  </div>
+<div class="loader" aria-hidden="true">
+  <div class="loader__photo"><img src="/web/clovicspfp.jpg" alt="" /></div>
+  <div class="loader__name">RYUUU</div>
+  <div class="loader__role">Developer de servidores</div>
+  <div class="loader__line"></div>
+  <div class="loader__welcome">BIENVENIDO</div>
 </div>
-<div class="bg-glow" aria-hidden="true">
-  <span class="blob blob-a"></span>
-  <span class="blob blob-b"></span>
-  <span class="blob blob-c"></span>
-</div>
-
 <header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="/web/">
-      <img class="brand-icon" src="/web/clovicspfp.jpg" alt="" />
-      <span>RYUUU</span>
-    </a>
-    <nav class="nav-links" aria-label="Principal">
-      <span class="nav-indicator" aria-hidden="true"></span>
-      <a href="/web/" class="active" aria-current="page">Inicio</a>
-      <a href="/web/trabajos/">Trabajos</a>
-      <a href="/web/trayectoria/">Trayectoria</a>
-      <a href="/web/contacto/">Contacto</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  <a class="brand" href="#inicio"><img src="/web/clovicspfp.jpg" alt="" /><span>ryu<small>.dev</small></span></a>
+  <nav class="nav__links" aria-label="Secciones">
+    <span class="nav__pill" aria-hidden="true"></span>
+      <a href="#inicio" class="is-active">Inicio</a>
+      <a href="#servidores">Servidores</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#referencias">Referencias</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="nav__actions">
+    <a class="nav__status js-dc-color" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg><i></i><span class="js-dc-status">Discord</span></a>
+    <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<nav class="mobile-menu" aria-label="Menú móvil">
-  <a href="/web/" class="active">Inicio</a>
-  <a href="/web/trabajos/">Trabajos</a>
-  <a href="/web/trayectoria/">Trayectoria</a>
-  <a href="/web/contacto/">Contacto</a>
-</nav>
-
 <main>
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <span class="eyebrow reveal"><span class="pulse"></span> Disponible para proyectos</span>
-        <h1 class="split" style="--base:150ms">Qué tal, soy <span class="grad">Ryuuu</span> <span class="wave">👋</span></h1>
-        <p class="typing-line reveal" style="--d:.5s"><span class="prompt">&gt;</span><span class="typed" data-words='["configs para servidores de Minecraft","plugins en Java desde cero","economías balanceadas","rangos, eventos y modalidades"]'></span><span class="caret"></span></p>
-        <p class="hero-text reveal" style="--d:.65s">
-          Detrás de un buen servidor de Minecraft hay mucha configuración
-          invisible: economía balanceada, rangos, eventos y plugins que no se
-          caen a mitad de temporada. Eso es lo que hago — si tu servidor lo
-          necesita, hablemos.
-        </p>
-        <div class="hero-actions reveal" style="--d:.8s">
-          <a class="btn btn-primary magnetic" href="/web/trabajos/">Ver trabajos <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-ghost magnetic" href="/web/trayectoria/">Ver trayectoria</a>
+  <section class="hero" id="inicio">
+    <div class="container hero__grid">
+      <div class="hero__left">
+        <span class="eyebrow"><span class="pulse"></span> Disponible para proyectos</span>
+        <h1 class="split" style="--base:500ms">Qué tal, soy <span class="grad">Ryuuu</span> <span class="wave">👋</span></h1>
+        <p class="typing"><span class="typed" data-words='["configs para servidores de Minecraft","plugins en Java desde cero","economías balanceadas","rangos, eventos y modalidades"]'></span><span class="caret"></span></p>
+        <p class="hero__text">Detrás de un buen servidor de Minecraft hay mucha configuración invisible: economía balanceada, rangos, eventos y plugins que no se caen a mitad de temporada. Eso es lo que hago — si tu servidor lo necesita, hablemos.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary magnetic" href="#contacto">Contáctame <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost magnetic" href="#servidores">Ver experiencia</a>
+        </div>
+        <div class="hero__social">
+          <a class="social-btn social-btn--discord" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener" aria-label="Servidor de Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg> Discord</a>
+          <button class="social-btn" data-copy="ryudeidadd" title="Copiar usuario">@ryudeidadd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
         </div>
       </div>
-
-      <div class="hero-photo reveal zoom" style="--d:.3s">
-        <div class="photo-stage">
-          <div class="orbit"><span class="block block-1"></span><span class="block block-2"></span><span class="block block-3"></span></div>
-          <div class="orbit orbit-2"><span class="block block-4"></span><span class="block block-5"></span></div>
-          <div class="hero-photo-ring">
-            <img class="js-dc-avatar" src="/web/clovicspfp.jpg" alt="Foto de Ryuuu" />
-            <span class="dc-dot dc-dot-offline js-dc-dot"></span>
-          </div>
+      <div class="hero__right">
+        <div class="photo">
+          <span class="photo__glow"></span>
+          <span class="photo__ring"></span>
+          <span class="photo__ring photo__ring--2"></span>
+          <img class="js-dc-avatar" src="/web/clovicspfp.jpg" alt="Foto de Ryuuu" />
+          <span class="block block--1"></span><span class="block block--2"></span><span class="block block--3"></span><span class="block block--4"></span>
+          <span class="dc-dot dc-dot-offline js-dc-dot"></span>
         </div>
-        <span class="hero-name js-dc-name">Ryuuu</span>
-        <a class="discord-card" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">
-          <div class="dc-head">
-            <div class="dc-label"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg> DISCORD</div>
-            <div class="dc-status js-dc-status">Conectando…</div>
-          </div>
-          <div class="dc-activity js-dc-activity" hidden>
-            <div class="dc-activity-name js-dc-activity-name"></div>
-            <div class="dc-activity-detail js-dc-activity-detail"></div>
+        <a class="presence js-dc-color" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">
+          <div class="presence__head"><span class="presence__name js-dc-name">Ryuuu</span><span class="presence__status js-dc-status">Conectando…</span></div>
+          <div class="presence__activity js-dc-activity" hidden>
+            <div class="presence__act-name js-dc-activity-name"></div>
+            <div class="presence__act-detail js-dc-activity-detail"></div>
           </div>
         </a>
       </div>
     </div>
-
-    <div class="section-inner">
+    <div class="container">
       <div class="stats" data-stagger=".12">
-        <div class="stat"><div class="stat-num" data-count="3">0</div><div class="stat-label">servidores en mi trayectoria</div></div>
-        <div class="stat"><div class="stat-num" data-count="250" data-suffix="+">0</div><div class="stat-label">jugadores concurrentes soportados</div></div>
-        <div class="stat"><div class="stat-num" data-count="2024">0</div><div class="stat-label">configurando servidores desde</div></div>
-        <div class="stat"><div class="stat-num" data-count="10" data-suffix="/10">0</div><div class="stat-label">valoración de RayoMc</div></div>
+        <div class="stat"><div class="stat__num" data-count="3">0</div><div class="stat__label">servidores en mi trayectoria</div></div>
+        <div class="stat"><div class="stat__num" data-count="250" data-suffix="+">0</div><div class="stat__label">jugadores concurrentes soportados</div></div>
+        <div class="stat"><div class="stat__num" data-count="2024">0</div><div class="stat__label">configurando servidores desde</div></div>
+        <div class="stat"><div class="stat__num" data-count="10" data-suffix="/10">0</div><div class="stat__label">valoración de RayoMc</div></div>
       </div>
     </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span>SCROLL</div>
   </section>
 
-  <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Configs YAML</span><span>Plugins en Java</span><span>Economías</span><span>Rangos</span><span>Eventos</span><span>Minijuegos</span><span>Cosméticos</span><span>Herramientas de staff</span><span>Optimización</span><span>Modalidades desde cero</span><span>Corrección de bugs</span><span>Configs YAML</span><span>Plugins en Java</span><span>Economías</span><span>Rangos</span><span>Eventos</span><span>Minijuegos</span><span>Cosméticos</span><span>Herramientas de staff</span><span>Optimización</span><span>Modalidades desde cero</span><span>Corrección de bugs</span></div></div>
-
-  <section class="block-section">
-    <div class="section-inner split-showcase">
-      <div class="showcase-copy">
-        <span class="section-kicker reveal">lo que hago</span>
-        <h2 class="split">Configs limpias que <span class="grad">no se rompen</span></h2>
-        <p class="reveal">Cada número de la economía, cada permiso de rango y cada evento programado está pensado para que el servidor funcione solo, temporada tras temporada.</p>
-        <ul class="check-list" data-stagger=".1">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".3"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg><span>Economía, rangos y eventos configurados en YAML</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".3"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg><span>Plugins personalizados escritos en Java desde cero</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".3"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg><span>Optimización pensada para servidores con mucha gente</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".3"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg><span>Corrección de bugs y mejora de modalidades existentes</span></li>
-        </ul>
+  <section class="section" id="servidores">
+    <div class="container">
+      <div class="section__head">
+        <span class="kicker reveal">proyectos</span>
+        <h2 class="split">Servidores en los que <span class="grad">he trabajado</span></h2>
+        <p class="reveal">Donde he configurado, programado y arreglado cosas para que miles de partidas salgan bien.</p>
       </div>
-      <div class="terminal reveal from-right">
-        <div class="term-bar"><i></i><i></i><i></i><span class="term-title">plugins/Economy/economy.yml</span></div>
-        <pre class="term-body"></pre>
+      <div class="servers">
+        <div class="servers__line"><span></span></div>
+        <div class="server server--current">
+          <span class="server__node" aria-hidden="true"></span>
+          <article class="server__card spot reveal reveal--right">
+            <img class="server__logo" src="/web/images/logos/rayomc.png" alt="Logo de RayoMc" />
+            <div class="server__body">
+              <div class="server__head"><h3>RayoMc</h3><span class="status status--active">Actual</span></div>
+              <p class="server__dates">2025 – Presente</p>
+              <p class="server__desc">Desarrollo de plugins personalizados de cosméticos, corrección de bugs, optimización de modalidades existentes y creación de una modalidad nueva desde cero.</p>
+              <div class="server__tags"><span class="tag">Cosméticos</span><span class="tag">Java</span><span class="tag">Modalidades</span><span class="tag">Bugs</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="server">
+          <span class="server__node" aria-hidden="true"></span>
+          <article class="server__card spot reveal reveal--right">
+            <img class="server__logo" src="/web/images/logos/minesplash.png" alt="Logo de MineSplash" />
+            <div class="server__body">
+              <div class="server__head"><h3>MineSplash</h3><span class="status">Legado</span></div>
+              <p class="server__dates">2024 – 2026</p>
+              <p class="server__desc">Configuración avanzada de sistemas de economía, rangos y eventos usando YAML. Optimización de plugins para más de 250 jugadores concurrentes.</p>
+              <div class="server__tags"><span class="tag">YAML</span><span class="tag">Economía</span><span class="tag">Rangos</span><span class="tag">250+ jugadores</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="server">
+          <span class="server__node" aria-hidden="true"></span>
+          <article class="server__card spot reveal reveal--right">
+            <img class="server__logo" src="/web/images/logos/minexus.png" alt="Logo de Minexus" />
+            <div class="server__body">
+              <div class="server__head"><h3>Minexus</h3><span class="status">Legado</span></div>
+              <p class="server__dates">2024 – 2024</p>
+              <p class="server__desc">Desarrollo y mantenimiento de plugins personalizados (eventos, minijuegos, herramientas de staff). Totalmente escrito en Java desde cero.</p>
+              <div class="server__tags"><span class="tag">Java</span><span class="tag">Eventos</span><span class="tag">Minijuegos</span><span class="tag">Staff tools</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="logos" aria-hidden="true"><div class="logos__track"><div class="logo-chip"><img src="/web/images/logos/rayomc.png" alt="" />RayoMc <em>2025 – hoy</em></div><div class="logo-chip"><img src="/web/images/logos/minesplash.png" alt="" />MineSplash <em>2024 – 2026</em></div><div class="logo-chip"><img src="/web/images/logos/minexus.png" alt="" />Minexus <em>2024</em></div><div class="logo-chip"><img src="/web/images/logos/rayomc.png" alt="" />RayoMc <em>2025 – hoy</em></div><div class="logo-chip"><img src="/web/images/logos/minesplash.png" alt="" />MineSplash <em>2024 – 2026</em></div><div class="logo-chip"><img src="/web/images/logos/minexus.png" alt="" />Minexus <em>2024</em></div><div class="logo-chip"><img src="/web/images/logos/rayomc.png" alt="" />RayoMc <em>2025 – hoy</em></div><div class="logo-chip"><img src="/web/images/logos/minesplash.png" alt="" />MineSplash <em>2024 – 2026</em></div><div class="logo-chip"><img src="/web/images/logos/minexus.png" alt="" />Minexus <em>2024</em></div><div class="logo-chip"><img src="/web/images/logos/rayomc.png" alt="" />RayoMc <em>2025 – hoy</em></div><div class="logo-chip"><img src="/web/images/logos/minesplash.png" alt="" />MineSplash <em>2024 – 2026</em></div><div class="logo-chip"><img src="/web/images/logos/minexus.png" alt="" />Minexus <em>2024</em></div></div></div>
+  </section>
+
+  <section class="section" id="habilidades">
+    <div class="container skills-grid">
+      <div>
+        <div class="section__head">
+          <span class="kicker reveal">habilidades</span>
+          <h2 class="split">Lo que se me <span class="grad">da bien</span></h2>
+        </div>
+        <div class="skills">
+          <div class="skill" style="--d:0.00s">
+            <div class="skill__top"><span class="skill__name">Configs YAML<small>economía · rangos · eventos</small></span><span class="skill__pct">95%</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="--w:95%"></div></div>
+          </div>
+          <div class="skill" style="--d:0.12s">
+            <div class="skill__top"><span class="skill__name">Plugins en Java<small>hechos desde cero</small></span><span class="skill__pct">90%</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="--w:90%"></div></div>
+          </div>
+          <div class="skill" style="--d:0.24s">
+            <div class="skill__top"><span class="skill__name">Optimización<small>rendimiento con mucha gente</small></span><span class="skill__pct">88%</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill" style="--d:0.36s">
+            <div class="skill__top"><span class="skill__name">Modalidades<small>crear y mejorar</small></span><span class="skill__pct">85%</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill" style="--d:0.48s">
+            <div class="skill__top"><span class="skill__name">Corrección de bugs<small>que no se caiga nada</small></span><span class="skill__pct">92%</span></div>
+            <div class="skill__bar"><div class="skill__fill" style="--w:92%"></div></div>
+          </div>
+        </div>
+        <div class="quote reveal">Configurando y programando servidores de Minecraft desde 2024, con más de 250 jugadores conectados a la vez.</div>
+      </div>
+      <div class="terminal reveal reveal--right">
+        <div class="terminal__bar"><i></i><i></i><i></i><span>plugins/Economy/economy.yml</span></div>
+        <pre class="terminal__body"></pre>
       </div>
       <template id="term-src">c|# economy.yml · ejemplo
 k|economia¦|:
@@ -145,43 +192,119 @@ c|# ✓ recargado sin errores</template>
     </div>
   </section>
 
-  <section class="block-section">
-    <div class="section-inner">
-      <div class="section-head">
-        <span class="section-kicker reveal">han confiado en mí</span>
-        <h2 class="split">Servidores con los que <span class="grad">he trabajado</span></h2>
+  <section class="section" id="referencias">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="kicker reveal">referencias</span>
+        <h2 class="split">Lo que dicen <span class="grad">mis clientes</span></h2>
+        <p class="reveal">Dueños y managers de los servidores con los que he trabajado.</p>
       </div>
-      <div class="logo-row" data-stagger=".1">
-        <a class="logo-chip" href="/web/trayectoria/"><img src="/web/images/logos/rayomc.png" alt="" />RayoMc</a>
-        <a class="logo-chip" href="/web/trayectoria/"><img src="/web/images/logos/minesplash.png" alt="" />MineSplash</a>
-        <a class="logo-chip" href="/web/trayectoria/"><img src="/web/images/logos/minexus.png" alt="" />Minexus</a>
+      <div class="refs" data-stagger=".12">
+        <article class="ref spot">
+          <div class="ref__score"><span class="ref__mark">“</span><span class="ref__rating">★ 10/10</span></div>
+          <p class="ref__text">Me gustó mucho el servicio. Pedí un plugin personalizado de cosméticos, el tiempo de entrega fue rápido, muy buena atención, en todo momento hizo caso a mis indicaciones. Sin duda, el mejor. 10/10.</p>
+          <button class="ref__more" hidden>Ver más</button>
+          <div class="ref__author"><img src="/web/images/logos/rayomc.png" alt="" /><div><div class="ref__who">Iwidayo</div><div class="ref__role">Dueño de RayoMc</div></div></div>
+        </article>
+        <article class="ref spot">
+          <div class="ref__score"><span class="ref__mark">“</span></div>
+          <p class="ref__text">Ha demostrado ser una persona dedicada y comprometida con su trabajo. Como developer tiene una excelente capacidad para crear plugins no pensados: las rooms, el calendario y la vida compartida funcionan perfectamente y no han presentado ningún problema. Ryu es una pieza clave en un servidor.</p>
+          <button class="ref__more" hidden>Ver más</button>
+          <div class="ref__author"><img src="/web/images/logos/minesplash.png" alt="" /><div><div class="ref__who">LeadVal</div><div class="ref__role">Manager de MineSplash</div></div></div>
+        </article>
+        <article class="ref spot">
+          <div class="ref__score"><span class="ref__mark">“</span></div>
+          <p class="ref__text">Mi reseña con el trabajo de Ryu es bastante buena, estoy totalmente satisfecho con el trabajo que ha hecho hasta el momento.</p>
+          <button class="ref__more" hidden>Ver más</button>
+          <div class="ref__author"><img src="/web/images/logos/minesplash.png" alt="" /><div><div class="ref__who">Bronceadito</div><div class="ref__role">Dueño de MineSplash</div></div></div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section>
-  <div class="section-inner">
-    <div class="cta-banner reveal zoom">
-      <h2 class="split">¿Tu servidor necesita <span class="grad">una mano?</span></h2>
-      <p>Cuéntame qué tienes en mente: una config nueva, un plugin a medida o arreglar eso que se cae cada fin de semana.</p>
-      <a class="btn btn-primary magnetic" href="/web/contacto/">Hablemos <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <section class="section" id="trabajos">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="kicker reveal">servicios</span>
+        <h2 class="split">Trabajos <span class="grad">realizados</span></h2>
+        <p class="reveal">Todo lo que necesita un servidor por dentro: desde la economía hasta el plugin que nadie más tiene.</p>
+      </div>
+      <div class="services" data-stagger=".08">
+        <article class="service spot service--wide">
+          <span class="service__num">01</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 13h6M9 17h4"/></svg></div>
+          <h3>Configuraciones</h3>
+          <p>Sistemas de economía, rangos y eventos configurados en YAML, balanceados para que la temporada dure.</p>
+          <div class="tags"><span class="tag">YAML</span><span class="tag">Economía</span><span class="tag">Rangos</span><span class="tag">Eventos</span></div>
+        </article>
+        <article class="service spot">
+          <span class="service__num">02</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+          <h3>Plugins personalizados</h3>
+          <p>Plugins a medida en Java, desde cero: cosméticos, sistemas únicos y mecánicas que no existen en otro lado.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Cosméticos</span><span class="tag">A medida</span></div>
+        </article>
+        <article class="service spot">
+          <span class="service__num">03</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg></div>
+          <h3>Modalidades</h3>
+          <p>Creación de modalidades nuevas desde cero y mejora de las que ya tienes funcionando.</p>
+          <div class="tags"><span class="tag">Desde cero</span><span class="tag">Rediseño</span></div>
+        </article>
+        <article class="service spot">
+          <span class="service__num">04</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <h3>Optimización</h3>
+          <p>Ajuste de plugins y configs para aguantar mucha gente conectada sin lag.</p>
+          <div class="tags"><span class="tag">250+ jugadores</span><span class="tag">Rendimiento</span></div>
+        </article>
+        <article class="service spot">
+          <span class="service__num">05</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Bugs y mantenimiento</h3>
+          <p>Encuentro y corrijo lo que falla, para que el servidor no se caiga a mitad de temporada.</p>
+          <div class="tags"><span class="tag">Debug</span><span class="tag">Soporte</span></div>
+        </article>
+        <article class="service spot service--wide">
+          <span class="service__num">06</span>
+          <div class="service__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg></div>
+          <h3>Eventos y minijuegos</h3>
+          <p>Eventos, minijuegos y herramientas para el staff que le dan vida al servidor.</p>
+          <div class="tags"><span class="tag">Minijuegos</span><span class="tag">Staff tools</span></div>
+        </article>
+      </div>
+      <div class="process" data-stagger=".15"><div class="step"><div class="step__dot">1</div><h3>Me cuentas la idea</h3><p>Por Discord, con todo el detalle que tengas.</p></div><div class="step"><div class="step__dot">2</div><h3>Definimos el alcance</h3><p>Qué se hace, cómo y para cuándo.</p></div><div class="step"><div class="step__dot">3</div><h3>Desarrollo y pruebas</h3><p>Lo construyo y lo pruebo antes de entregarlo.</p></div><div class="step"><div class="step__dot">4</div><h3>Entrega</h3><p>Listo para tu servidor, y ajustes si hacen falta.</p></div></div>
     </div>
-  </div>
+  </section>
+
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="contact reveal reveal--zoom">
+        <div class="contact__avatar">
+          <img class="js-dc-avatar" src="/web/clovicspfp.jpg" alt="Foto de Ryuuu" />
+          <span class="dc-dot dc-dot-offline js-dc-dot"></span>
+        </div>
+        <span class="kicker">contacto</span>
+        <h2 class="split">¡CONTÁC<span class="grad">TAME!</span></h2>
+        <p>¿Quieres llevar tu servidor al siguiente nivel? Escríbeme por Discord y lo hablamos: una config nueva, un plugin a medida o arreglar eso que se cae cada fin de semana.</p>
+        <div class="contact__actions">
+          <a class="btn btn--discord magnetic" href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.7.1 18.2a19.9 19.9 0 0 0 6 3l1.3-2a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4a12.7 12.7 0 0 1-2 1l1.3 2a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.8ZM8.3 15.4c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Zm7.4 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4c1.2 0 2.2 1.1 2.2 2.4s-1 2.4-2.2 2.4Z"/></svg> Escríbeme en Discord</a>
+          <button class="handle" data-copy="ryudeidadd" title="Copiar usuario">@ryudeidadd <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+        </div>
+      </div>
+      <div class="faq" data-stagger=".1"><details><summary>¿Qué tipo de trabajos haces?</summary><p>Configuraciones (economía, rangos, eventos), plugins personalizados en Java, modalidades nuevas, optimización y corrección de bugs.</p></details><details><summary>¿Cuál es la mejor forma de contactarte?</summary><p>Por ahora, Discord. Escríbeme por privado a @ryudeidadd o entra al servidor desde el botón de arriba.</p></details><details><summary>¿Solo trabajos pagados?</summary><p>También estoy abierto a colaboraciones, consultas técnicas o simplemente charlar sobre servidores.</p></details></div>
+    </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <span>© <span class="js-year">2025</span> Ryuuu · ryusitoo.github.io</span>
-    <div class="footer-links">
-      <a href="/web/trabajos/">Trabajos</a>
-      <a href="/web/trayectoria/">Trayectoria</a>
-      <a href="https://discord.gg/HVJnEmYe5R" target="_blank" rel="noopener">Discord</a>
-    </div>
+  <div class="container footer__inner">
+    <span>© <span class="js-year">2026</span> ryu.dev — hecho con café y muchos YAML</span>
+    <span>ryusitoo.github.io</span>
     <button class="to-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
   </div>
 </footer>
 
-<script src="/web/script.js?v=3"></script>
+<script src="/web/script.js?v=4"></script>
 </body>
 </html>
